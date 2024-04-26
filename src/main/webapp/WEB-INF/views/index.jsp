@@ -8,10 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index page</h1>
+    <h1>인덱스 페이지</h1>
     <hr>
-
-    <a href="list">목록보기</a>
-    <a href="write">글 작성하기</a>
+    <span>-</span><a href="list">목록보기</a><br>
+    <span>-</span><a href="write">글 작성하기</a>
 </body>
 </html>

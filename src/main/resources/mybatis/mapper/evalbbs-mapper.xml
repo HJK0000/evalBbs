@@ -6,12 +6,15 @@
 	<select id="listDao" resultType="com.example.evalBbs.dto.EvalBbsDto">
 		SELECT * FROM evalbbs
 	</select>
-	<select id="detailDao">		
+	<select id="detailDao" resultType="com.example.evalBbs.dto.EvalBbsDto">		
 		SELECT * FROM evalbbs WHERE bno = #{bno}
 	</select>
 	<insert id="writeDao">
-		INSERT INTO evalbbs (writer, title, content) VALUES
-		(#{param1}, #{param2}, #{param3})
+		INSERT INTO evalbbs (writer, title, content, regdate) VALUES
+		(#{param1}, #{param2}, #{param3}, now())
 	</insert>
+	<delete id="deleteDao">
+		DELETE FROM evalbbs where bno = #{bno}
+	</delete>
   </mapper>
   

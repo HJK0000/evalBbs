@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>상세페이지</h1>
+    <h1>상세보기</h1>
     <hr>
     <table border="1">
         <tr>
@@ -22,6 +22,5 @@
         </tr>
     </table>
     <a href="delete?bno=${dto.bno}">삭제하기</a>
-
 </body>
 </html>

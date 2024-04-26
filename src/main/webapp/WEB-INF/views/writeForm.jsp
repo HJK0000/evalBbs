@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>WriteForm page</h1>
+    <h1>글 작성하기</h1>
     <hr>
     <form action="write" method="get">
         <table border="1">
@@ -26,6 +26,5 @@
              </tr>
          </table>
      </form>
-
 </body>
 </html>

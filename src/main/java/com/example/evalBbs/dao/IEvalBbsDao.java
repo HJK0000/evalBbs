@@ -11,5 +11,5 @@ public interface IEvalBbsDao {
 	public List<EvalBbsDto> listDao();
 	public EvalBbsDto detailDao(String bno);
 	public int writeDao(String writer, String title, String content);
-
+	public int deleteDao(String bno);
 }
