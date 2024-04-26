@@ -14,14 +14,14 @@
     <div>  
         <table width="500" cellpadding="0" cellspacing="0" border="1">
         <tr>
-            <td>번호</td><td>작성자</td><td>제목</td><td>삭제</td>
+            <td>번호</td><td>작성자</td><td>제목</td>
         </tr>
         <c:forEach var="list" items="${list}">
         <tr>
-            <td><a href="view?bno=${list.bno}">${list.bno}</a></td>
+            <td><a href="detail?bno=${list.bno}">${list.bno}</a></td>
             <td>${list.writer}</td>
             <td>${list.title}</td>
-            <td><a href="delete?bno=${list.bno}">X</a></td>
+
         </tr>    
         </c:forEach>    
         </table>

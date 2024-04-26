@@ -1,5 +1,7 @@
 package com.example.evalBbs.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +28,32 @@ public class EvalBbsController {
 		model.addAttribute("list", dao.listDao());
 		
 		return "list";
+	}
+	
+	@RequestMapping("/detail")
+	public String view(HttpServletRequest request, Model model) {
+		
+		String sBno = request.getParameter("bno");
+		model.addAttribute("dto", dao.detailDao(sBno));
+			
+		return "detail";
+			
+	}
+	
+	@RequestMapping("/writeForm")
+	public String writeForm() {	
+		
+		return "writeForm";
+	}
+	
+	@RequestMapping("/write")
+	public String write(Model model, HttpServletRequest request) {
+		
+		dao.writeDao(request.getParameter("writer"),
+				request.getParameter("title"),
+				request.getParameter("content"));
+	
+		return "redirect:list";
 	}
 	
 	
