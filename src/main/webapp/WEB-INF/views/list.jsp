@@ -16,12 +16,12 @@
         <tr>
             <td>번호</td><td>작성자</td><td>제목</td><td>삭제</td>
         </tr>
-        <c:forEach var="dto" items="${list}">
+        <c:forEach var="list" items="${list}">
         <tr>
-            <td><a href="view?id=${dto.id}">${dto.id}</a></td>
-            <td>${dto.writer}</td>
-            <td>${dto.title}</td>
-            <td><a href="delete?id=${dto.id}">X</a></td>
+            <td><a href="view?bno=${list.bno}">${list.bno}</a></td>
+            <td>${list.writer}</td>
+            <td>${list.title}</td>
+            <td><a href="delete?bno=${list.bno}">X</a></td>
         </tr>    
         </c:forEach>    
         </table>
